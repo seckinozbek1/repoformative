@@ -33,6 +33,7 @@ print(data_tr)
 Created another function that would convert the kilometer values to meters.
 
 ```{r}
+#Assigned data_tr to data_new to avoid referencing issues
 data_new <- data_tr
 print(data_new)
 
