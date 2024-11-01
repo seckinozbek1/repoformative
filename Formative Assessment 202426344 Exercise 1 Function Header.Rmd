@@ -39,7 +39,7 @@ convert_to_meters <- function(data_new) {
   return(data_new)
 }
 
-data_new <- convert_to_meters(data)
+data_new <- convert_to_meters(data_new)
 print(data_new)
 
 ```
