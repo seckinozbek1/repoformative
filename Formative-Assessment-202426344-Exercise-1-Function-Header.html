@@ -418,19 +418,19 @@ print(data_tr)</code></pre>
 <h2>Second Round</h2>
 <p>Created another function that would convert the kilometer values to
 meters.</p>
-<pre class="r"><code>#Assigned data_new variable to the dataset
-data_new &lt;- UScitiesD
+<pre class="r"><code>#Assigned data_tr to data_new to avoid referencing issues
+data_new &lt;- data_tr
 print(data_new)</code></pre>
-<pre><code>##               Atlanta Chicago Denver Houston LosAngeles Miami NewYork
-## Chicago           587                                                
-## Denver           1212     920                                        
-## Houston           701     940    879                                 
-## LosAngeles       1936    1745    831    1374                         
-## Miami             604    1188   1726     968       2339              
-## NewYork           748     713   1631    1420       2451  1092        
-## SanFrancisco     2139    1858    949    1645        347  2594    2571
-## Seattle          2182    1737   1021    1891        959  2734    2408
-## Washington.DC     543     597   1494    1220       2300   923     205
+<pre><code>##               Atlanta Chicago  Denver Houston LosAngeles   Miami NewYork
+## Chicago        944.68                                                   
+## Denver        1950.52 1480.59                                           
+## Houston       1128.15 1512.78 1414.61                                   
+## LosAngeles    3115.68 2808.30 1337.36 2211.23                           
+## Miami          972.04 1911.90 2777.72 1557.84    3764.25                
+## NewYork       1203.79 1147.46 2624.83 2285.26    3944.49 1757.40        
+## SanFrancisco  3442.38 2990.15 1527.26 2647.36     558.44 4174.63 4137.61
+## Seattle       3511.58 2795.42 1643.14 3043.26    1543.36 4399.94 3875.29
+## Washington.DC  873.87  960.78 2404.35 1963.39    3701.48 1485.42  329.91
 ##               SanFrancisco Seattle
 ## Chicago                           
 ## Denver                            
@@ -439,16 +439,16 @@ print(data_new)</code></pre>
 ## Miami                             
 ## NewYork                           
 ## SanFrancisco                      
-## Seattle                678        
-## Washington.DC         2442    2329</code></pre>
+## Seattle            1091.13        
+## Washington.DC      3930.01 3748.15</code></pre>
 <pre class="r"><code># Function that converts kilometer values to meters
 convert_to_meters &lt;- function(data_new) {
-  data_new &lt;- (round(data_new * 1.60934, 2))*1000  # Convert distances from kilometers to meters
-  return(data_new)
+  data_meter &lt;- data_new*1000  # Convert distances from kilometers to meters
+  return(data_meter)
 }
 
-data_new &lt;- convert_to_meters(data_new)
-print(data_new)</code></pre>
+data_meter &lt;- convert_to_meters(data_new)
+print(data_meter)</code></pre>
 <pre><code>##               Atlanta Chicago  Denver Houston LosAngeles   Miami NewYork
 ## Chicago        944680                                                   
 ## Denver        1950520 1480590                                           
