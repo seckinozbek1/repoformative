@@ -27,3 +27,19 @@ data_tr <- transform_data(data)
 print(data_tr)
 
 ```
+
+## Second Round
+
+Created another function that would convert the kilometer values to meters.
+
+```{r}
+# Function that converts kilometer values to meters
+convert_to_meters <- function(data_km) {
+  data_meter <- data_tr * 1000  # Convert distances from kilometers to meters
+  return(data_meter)
+}
+
+data_meter <- convert_to_meters(data_km)
+print(data_meter)
+
+```
