@@ -1,0 +1,29 @@
+---
+title: "Formative Assessment"
+author: '202426344'
+date: "2024-10-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## MY 472 Exercise 1
+
+For this question I used the built-in R dataset called UScitiesD, which gives an information on the distance among the US cities. I created a function called transform_data to convert the mile values into kilometer values.
+
+```{r}
+
+#Assigned a variable to the dataset
+data <- UScitiesD
+print(data)
+#Defining the function to add a column header called distance
+transform_data <- function(data) {
+data <- round(data * 1.60934, 2)
+return(data)}
+
+data_tr <- transform_data(data)
+print(data_tr)
+
+```
