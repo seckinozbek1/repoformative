@@ -419,13 +419,13 @@ print(data_tr)</code></pre>
 <p>Created another function that would convert the kilometer values to
 meters.</p>
 <pre class="r"><code># Function that converts kilometer values to meters
-convert_to_meters &lt;- function(data_km) {
-  data_meter &lt;- data_tr * 1000  # Convert distances from kilometers to meters
-  return(data_meter)
+convert_to_meters &lt;- function(data) {
+  data &lt;- (round(data * 1.60934, 2))*1000  # Convert distances from kilometers to meters
+  return(data)
 }
 
-data_meter &lt;- convert_to_meters(data_km)
-print(data_meter)</code></pre>
+data &lt;- convert_to_meters(data)
+print(data)</code></pre>
 <pre><code>##               Atlanta Chicago  Denver Houston LosAngeles   Miami NewYork
 ## Chicago        944680                                                   
 ## Denver        1950520 1480590                                           
