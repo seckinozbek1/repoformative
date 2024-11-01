@@ -418,14 +418,37 @@ print(data_tr)</code></pre>
 <h2>Second Round</h2>
 <p>Created another function that would convert the kilometer values to
 meters.</p>
+<pre class="r"><code>#Assigned data_new variable to the dataset
+data_new &lt;- UScitiesD
+print(data_new)</code></pre>
+<pre><code>##               Atlanta Chicago Denver Houston LosAngeles Miami NewYork
+## Chicago           587                                                
+## Denver           1212     920                                        
+## Houston           701     940    879                                 
+## LosAngeles       1936    1745    831    1374                         
+## Miami             604    1188   1726     968       2339              
+## NewYork           748     713   1631    1420       2451  1092        
+## SanFrancisco     2139    1858    949    1645        347  2594    2571
+## Seattle          2182    1737   1021    1891        959  2734    2408
+## Washington.DC     543     597   1494    1220       2300   923     205
+##               SanFrancisco Seattle
+## Chicago                           
+## Denver                            
+## Houston                           
+## LosAngeles                        
+## Miami                             
+## NewYork                           
+## SanFrancisco                      
+## Seattle                678        
+## Washington.DC         2442    2329</code></pre>
 <pre class="r"><code># Function that converts kilometer values to meters
-convert_to_meters &lt;- function(data) {
-  data &lt;- (round(data * 1.60934, 2))*1000  # Convert distances from kilometers to meters
-  return(data)
+convert_to_meters &lt;- function(data_new) {
+  data_new &lt;- (round(data_new * 1.60934, 2))*1000  # Convert distances from kilometers to meters
+  return(data_new)
 }
 
-data &lt;- convert_to_meters(data)
-print(data)</code></pre>
+data_new &lt;- convert_to_meters(data_new)
+print(data_new)</code></pre>
 <pre><code>##               Atlanta Chicago  Denver Houston LosAngeles   Miami NewYork
 ## Chicago        944680                                                   
 ## Denver        1950520 1480590                                           

@@ -33,13 +33,16 @@ print(data_tr)
 Created another function that would convert the kilometer values to meters.
 
 ```{r}
+data_new <- data_tr
+print(data_new)
+
 # Function that converts kilometer values to meters
 convert_to_meters <- function(data_new) {
-  data_new <- (round(data_new * 1.60934, 2))*1000  # Convert distances from kilometers to meters
-  return(data_new)
+  data_meter <- data_new*1000  # Convert distances from kilometers to meters
+  return(data_meter)
 }
 
-data_new <- convert_to_meters(data_new)
-print(data_new)
+data_meter <- convert_to_meters(data_new)
+print(data_meter)
 
 ```
